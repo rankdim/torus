@@ -148,7 +148,7 @@ input[type="range"]::-moz-range-track {
 
 #canvas2d {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   border: 2px solid #00ff88;
   border-radius: 5px;
@@ -160,7 +160,7 @@ input[type="range"]::-moz-range-track {
 
 #canvas2d-label {
   position: absolute;
-  top: 0px;
+  top: 10px;
   right: 20px;
   color: #00ff88;
   font-size: 12px;
