@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Life on Toroidal Surface | rank decomposition</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="controls">
+        <p>Game of Life on Torus</p>
+
+        <div class="control-group">
+          <button id="playPause">Start</button>
+          <button id="step">Step</button>
+          <button id="reset">Reset</button>
+        </div>
+
+        <div class="control-group">
+          <label>Load Pattern:</label>
+          <button id="glider">Glider</button>
+          <button id="oscillator">Oscillators</button>
+          <button id="pulsar">Pulsar</button>
+          <button id="spaceship">Spaceship</button>
+        </div>
+
+        <div class="control-group">
+          <label for="speed">Speed: <span id="speedValue">300</span>ms</label>
+          <input type="range" id="speed" min="50" max="1000" value="300" />
+        </div>
+
+        <div class="control-group">
+          <label for="density"
+            >Initial Density: <span id="densityValue">30</span>%</label
+          >
+          <input type="range" id="density" min="10" max="70" value="30" />
+        </div>
+
+        <div class="stats">
+          <div>Generation: <span id="generation">0</span></div>
+          <div>Living Cells: <span id="livingCells">0</span></div>
+          <div>Grid: 80×40 on torus</div>
+        </div>
+      </div>
+
+      <div id="canvas2d-label">2D View (Unwrapped Torus)</div>
+      <canvas id="canvas2d" width="640" height="320"></canvas>
+
+      <div id="info">
+        <p><strong>Controls:</strong></p>
+        <p>• Mouse: Rotate 3D view</p>
+        <p>• Scroll: Zoom in/out</p>
+        <p>• Orange dashed lines in 2D show torus wrapping edges</p>
+        <p>
+          <strong>Conway's Game of Life rules apply with torus topology</strong>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
